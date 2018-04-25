@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class MaterialInputComponent implements OnInit {
 
   constructor() { }
+  usuario = {
+    nombre: 'Luis'
+  };
 
   ngOnInit() {
+    setTimeout(() => {
+      this.usuario.nombre = 'Gerardo';
+    }, 2000);
   }
 
 }
