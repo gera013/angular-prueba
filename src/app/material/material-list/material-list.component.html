@@ -1,16 +1,25 @@
 <mat-list>
   <mat-list-item>
-    <img mat-line mat-list-avatar src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"/>
+    <img *ngIf="estudiante1.fotoURL" 
+          mat-line mat-list-avatar [src]="estudiante1.fotoURL"/>
+    <img *ngIf="!estudiante1.fotoURL" 
+          mat-line mat-list-avatar [src]="DEFAULT_PICTURE"/>
     <span mat-line>{{estudiante1.nombre}}</span>
     <span mat-line>{{estudiante1.ciudad}}</span>
   </mat-list-item>
   <mat-list-item>
-      <img mat-line mat-list-avatar src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"/>
+      <img *ngIf="estudiante2.fotoURL" 
+            mat-line mat-list-avatar [src]="estudiante2.fotoURL"/>
+      <img *ngIf="!estudiante2.fotoURL" 
+          mat-line mat-list-avatar [src]="DEFAULT_PICTURE"/>
      <span mat-line>{{estudiante2.nombre}}</span>
      <span mat-line>{{estudiante2.ciudad}}</span>
   </mat-list-item>
   <mat-list-item>
-      <img mat-line mat-list-avatar src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"/>
+      <img *ngIf="estudiante3.fotoURL"
+            mat-line mat-list-avatar [src]="estudiante3.fotoURL"/>
+      <img *ngIf="!estudiante3.fotoURL" 
+          mat-line mat-list-avatar [src]="DEFAULT_PICTURE"/>
     <span mat-line>{{estudiante3.nombre}}</span>
     <span mat-line>{{estudiante3.ciudad}}</span>
   </mat-list-item>

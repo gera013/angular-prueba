@@ -12,6 +12,7 @@ export class MaterialListComponent implements OnInit {
   estudiante2: Estudiante;
   estudiante3: Estudiante;
 
+  readonly DEFAULT_PICTURE = 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg';
   constructor() { }
 
   ngOnInit() {
@@ -21,13 +22,14 @@ export class MaterialListComponent implements OnInit {
     this.estudiante2 = {
       id: 2,
       nombre: 'Jorge Perez',
-      ciudad: 'Lima'
+      ciudad: 'Lima',
+      fotoURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJrKe8qGxq4q3xkJcV2cYaoc493bueM1oEYczh-JgH7vgmEcfERw'
     };
 
     this.estudiante3 = {
       id: 3,
       nombre: 'Maria Rodriguez',
-      ciudad: 'Bogota'
+      ciudad: 'Bogota',
     };
 
     setTimeout(() => {
@@ -35,6 +37,7 @@ export class MaterialListComponent implements OnInit {
         id: 4,
         nombre: 'Juan Lopez',
         ciudad: 'Santiago',
+        fotoURL: 'http://sobrancelhas.com/wp-content/uploads/2017/09/11_10.png'
       };
     }, 3000);
 
