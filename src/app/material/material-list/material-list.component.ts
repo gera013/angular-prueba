@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Estudiante } from '../../shared/model/estudiante';
+import { ClassEstudiante } from '../../shared/model/class-estudiante';
 @Component({
   selector: 'ed-material-list',
   templateUrl: './material-list.component.html',
@@ -7,7 +8,7 @@ import {Estudiante } from '../../shared/model/estudiante';
 })
 export class MaterialListComponent implements OnInit {
 
-  estudiante1: Estudiante;
+  estudiante1: ClassEstudiante;
   estudiante2: Estudiante;
   estudiante3: Estudiante;
 
@@ -15,13 +16,8 @@ export class MaterialListComponent implements OnInit {
 
   ngOnInit() {
     console.log('Inicializando el componente MaterialList');
-    this.estudiante1 = {
-      id: 1,
-      nombre: 'Luis Aviles',
-      ciudad: 'Cochabamba',
-      fotoURL: 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg',
-    };
-
+    this.estudiante1 = new ClassEstudiante(1, 'Luis Aviles' , 'Cochabamba');
+    console.log('edad.estudiante1:', this.estudiante1.getEdad());
     this.estudiante2 = {
       id: 2,
       nombre: 'Jorge Perez',
@@ -33,6 +29,15 @@ export class MaterialListComponent implements OnInit {
       nombre: 'Maria Rodriguez',
       ciudad: 'Bogota'
     };
+
+    setTimeout(() => {
+      this.estudiante3 = {
+        id: 4,
+        nombre: 'Juan Lopez',
+        ciudad: 'Santiago',
+      };
+    }, 3000);
+
   }
 
 }
