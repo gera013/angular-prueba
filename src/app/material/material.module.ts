@@ -6,22 +6,26 @@ import {
   MatButtonModule,
   MatIconModule,
   MatExpansionModule,
+  MatInputModule
 } from '@angular/material';
 import { MaterialButtonComponent } from './material-button/material-button.component';
+import { MaterialInputComponent } from './material-input/material-input.component';
 @NgModule({
   imports: [
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
+    MatInputModule,
     MatExpansionModule,
+    MatIconModule
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatExpansionModule,
+    MatInputModule
   ],
-  declarations: [MaterialDemoComponent, MaterialButtonComponent]
+  declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent]
 })
 export class MaterialModule { }
