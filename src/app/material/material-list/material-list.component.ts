@@ -12,6 +12,8 @@ export class MaterialListComponent implements OnInit {
   estudiante2: Estudiante;
   estudiante3: Estudiante;
 
+  listaEstudiantes: Estudiante[];
+
   readonly DEFAULT_PICTURE = 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg';
   constructor() { }
 
@@ -30,14 +32,20 @@ export class MaterialListComponent implements OnInit {
       id: 3,
       nombre: 'Maria Rodriguez',
       ciudad: 'Bogota',
+      fotoURL: 'http://sobrancelhas.com/wp-content/uploads/2017/09/11_10.png'
     };
 
+    this.listaEstudiantes = [
+      this.estudiante1,
+      this.estudiante2,
+      this.estudiante3
+    ];
+
     setTimeout(() => {
-      this.estudiante3 = {
+      this.listaEstudiantes[2] = {
         id: 4,
         nombre: 'Juan Lopez',
-        ciudad: 'Santiago',
-        fotoURL: 'http://sobrancelhas.com/wp-content/uploads/2017/09/11_10.png'
+        ciudad: 'Santiago'
       };
     }, 3000);
 
