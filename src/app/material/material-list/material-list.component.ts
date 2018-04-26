@@ -14,7 +14,6 @@ export class MaterialListComponent implements OnInit {
 
   listaEstudiantes: Estudiante[];
 
-  readonly DEFAULT_PICTURE = 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg';
   constructor() { }
 
   ngOnInit() {

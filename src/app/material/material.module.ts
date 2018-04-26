@@ -12,6 +12,7 @@ import {
 import { MaterialButtonComponent } from './material-button/material-button.component';
 import { MaterialInputComponent } from './material-input/material-input.component';
 import { MaterialListComponent } from './material-list/material-list.component';
+import { ItemEstudianteComponent } from './material-list/item-estudiante/item-estudiante.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -30,6 +31,6 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatInputModule,
     MatListModule
   ],
-  declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent]
+  declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent]
 })
 export class MaterialModule { }

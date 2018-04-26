@@ -1,10 +1,5 @@
 <mat-list>
-  <mat-list-item *ngFor="let estudiante of listaEstudiantes">
-    <img *ngIf="estudiante.fotoURL" 
-          mat-line mat-list-avatar [src]="estudiante.fotoURL"/>
-    <img *ngIf="!estudiante.fotoURL" 
-          mat-line mat-list-avatar [src]="DEFAULT_PICTURE"/>
-    <span mat-line>{{estudiante.nombre}}</span>
-    <span mat-line>{{estudiante.ciudad}}</span>
-  </mat-list-item>
+  <ed-item-estudiante *ngFor="let est of listaEstudiantes"
+                    [estudiante]="est">
+  </ed-item-estudiante>
 </mat-list>
