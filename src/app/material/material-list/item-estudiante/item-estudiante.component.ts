@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Estudiante } from '../../../shared/model/estudiante';
 
 @Component({
@@ -10,9 +10,17 @@ export class ItemEstudianteComponent implements OnInit {
   readonly DEFAULT_PICTURE = 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg';
   @Input()
   estudiante: Estudiante;
+
+  @Output()
+  onMouseClick = new  EventEmitter<Estudiante>()
   constructor() { }
 
   ngOnInit() {
   }
+
+  onClick(e: Estudiante) {
+    this.onMouseClick.emit(e);
+  }
+
 
 }
