@@ -1,5 +1,5 @@
 export interface Apod {
-    tittle: string;
+    title: string;
     date: string;
     explanation: string;
     url: string;
