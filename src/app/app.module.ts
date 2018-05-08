@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
+import { NasaApiService } from './shared/services/nasa-api.service';
 
 
 
@@ -26,7 +27,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [NasaApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
