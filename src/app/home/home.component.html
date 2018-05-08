@@ -7,7 +7,7 @@
                 {{apod.title}}
             </mat-card-title>
             <mat-card-subtitle>
-                {{apod.date}}
+                {{apod.date | date:'fullDate' | lowerCase}}
             </mat-card-subtitle>
         </mat-card-header>
         
@@ -23,5 +23,11 @@
         </mat-card-actions>
 
     </mat-card>
-
+    <!--div>
+        Sin pipe: {{apod.title}}
+        Con Pipe: {{apod.title | lowerCase}}
+    </div-->
+    <!--pre>
+        {{apod | json}}
+    </pre-->
 </div>

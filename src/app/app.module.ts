@@ -10,6 +10,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { NasaApiService } from './shared/services/nasa-api.service';
+import { LowerCasePipe } from './shared/pipes/lower-case.pipe';
 
 
 
@@ -19,6 +20,7 @@ import { NasaApiService } from './shared/services/nasa-api.service';
     LoginComponent,
     AboutPageComponent,
     HomeComponent,
+    LowerCasePipe,
 
   ],
   imports: [
