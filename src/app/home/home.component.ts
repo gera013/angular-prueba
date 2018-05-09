@@ -14,7 +14,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.apod = this.nasaApi.getApod();
+    this.nasaApi.getApod()
+    .subscribe((data: Apod) => {
+      this.apod = data;
+    });
   }
 
 }

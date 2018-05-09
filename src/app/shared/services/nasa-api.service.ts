@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Apod } from '../model/apod';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+const APOD_URL = 'https://api.nasa.gov/planetary/apod';
+const API_KEY = 'DEMO_KEY';
 
 @Injectable()
 export class NasaApiService {
 
-  private readonly DATA: Apod = {
-    date: "2017-11-08",
-    explanation: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, cupiditate? Quaerat distinctio ipsa, doloribus alias vero dolores iste ratione culpa quae mollitia nam eveniet commodi, animi non dignissimos sint. Vero!",
-    hdurl: "http://bloody-disgusting.com/wp-content/uploads/2014/07/img-web-the-strain-1400x750.jpg",
-    media_type: "image",
-    service_version: "v1",
-    title: "NGC 2261: Hubble's Variable Nebuka",
-    url: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/09/estos-son-19-luchadores-comic-marvel-vs-capcom-infinite_16.jpg?itok=wd6pJn_T",
-  };
-
-  constructor() {
+  //Dependecy injection: httpclient
+  constructor(private httpClient: HttpClient) {
   }
 
-  getApod(): Apod {
-    return this.DATA;
+  getApod(): Observable<Apod> {
+    return this.httpClient.get<Apod>(APOD_URL + '?api_key=' + API_KEY);
   }
 
 }
