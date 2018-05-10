@@ -15,6 +15,7 @@ import { MaterialButtonComponent } from './material-button/material-button.compo
 import { MaterialInputComponent } from './material-input/material-input.component';
 import { MaterialListComponent } from './material-list/material-list.component';
 import { ItemEstudianteComponent } from './material-list/item-estudiante/item-estudiante.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
@@ -25,7 +26,8 @@ import { ItemEstudianteComponent } from './material-list/item-estudiante/item-es
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule,
   ],
   exports: [
     MatToolbarModule,
