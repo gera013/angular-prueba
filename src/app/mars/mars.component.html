@@ -1,9 +1,26 @@
 <div>
-  <mat-card *ngFor="let marsImage of marsImages">
-    <mat-card-header>
-      <mat-card-title>Title</mat-card-title>
-      <mat-card-subtitle>Fecha</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://media.giphy.com/media/sdcIxdTkFD0g8/giphy.gif">
+  <mat-card>
+    <mat-form-field>
+        <mat-select placeholder="select your camara" [(ngModel)]="currentCamara">
+          <mat-option *ngFor="let camara of camaras" 
+                      [value]="camara" 
+                      (click)="onSelectCamara(camara)">
+            {{camara}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
   </mat-card>
+  <div class="card-container">
+      <mat-card class="card-content" *ngFor="let marsImage of marsImages">
+          <mat-card-header>
+            <mat-card-title>{{marsImage.rover.name}}</mat-card-title>
+            <mat-card-subtitle>{{marsImage.earth_date}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="marsImage.img_src">
+        </mat-card>
+  </div>
+  
+</div>
+<div class="card-content" *ngIf="!marsImages">
+  <mat-spinner style="margin:0 auto;"></mat-spinner>
 </div>

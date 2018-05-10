@@ -9,7 +9,8 @@ import {
   MatInputModule,
   MatListModule,
   MatCardModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSelectModule
 } from '@angular/material';
 import { MaterialButtonComponent } from './material-button/material-button.component';
 import { MaterialInputComponent } from './material-input/material-input.component';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatProgressSpinnerModule,
     FormsModule,
+    MatSelectModule
   ],
   exports: [
     MatToolbarModule,
@@ -37,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent]
 })
