@@ -1,4 +1,4 @@
-<div class="card-container">
+<div class="card-container" *ngIf="apod">
     <mat-card class="card-content">
         <h3>Astronomy picture of the day</h3>
         <mat-card-header>
@@ -21,7 +21,6 @@
             <button mat-button>Like</button>
             <button mat-button>Share</button>
         </mat-card-actions>
-
     </mat-card>
     <!--div>
         Sin pipe: {{apod.title}}
@@ -30,4 +29,13 @@
     <!--pre>
         {{apod | json}}
     </pre-->
+</div>
+<div class="card-content" *ngIf="!apod && !error">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+</div>
+
+<div class="card-content" *ngIf="error">
+    <mat-card>
+        {{error}}
+    </mat-card>
 </div>
